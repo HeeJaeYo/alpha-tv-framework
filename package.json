@@ -1,8 +1,9 @@
 {
   "name": "alpha-tv-framework",
   "version": "1.0.0",
-  "description": "",
+  "description": "jqeury, typescript 만을 이용한 tv ui framework",
   "main": "index.js",
+  "keywords": ["typescript", "jQuery"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,13 +11,21 @@
     "type": "git",
     "url": "git+https://github.com/HeeJaeYo/alpha-tv-framework.git"
   },
-  "author": "",
+  "author": "HeeJaeYo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/HeeJaeYo/alpha-tv-framework/issues"
   },
   "homepage": "https://github.com/HeeJaeYo/alpha-tv-framework#readme",
   "devDependencies": {
-    "typescript": "^4.4.4"
+    "@types/jquery": "^3.5.8",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.4",
+    "webpack": "^5.62.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
   }
 }
