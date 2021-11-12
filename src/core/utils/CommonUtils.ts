@@ -3,7 +3,7 @@
  * @param targetClass
  * @param baseClasses
  */
-function applyMixins(targetClass: any, baseClasses: any[]): void {
+export function applyMixins(targetClass: any, baseClasses: any[]): void {
   baseClasses.forEach((baseClass) => {
     Object.getOwnPropertyNames(baseClass.prototype).forEach((name) => {
       Object.defineProperty(

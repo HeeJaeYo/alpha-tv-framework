@@ -1,11 +1,17 @@
 {
   "name": "alpha-tv-framework",
   "version": "1.0.0",
-  "description": "jqeury, typescript 만을 이용한 tv ui framework",
+  "description": "typescript 만을 이용한 tv ui framework",
   "main": "index.js",
-  "keywords": ["typescript", "jQuery"],
+  "keywords": [
+    "typescript"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "type-check": "tsc",
+    "bundle": "webpack",
+    "dev": "webpakc serve --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -18,14 +24,19 @@
   },
   "homepage": "https://github.com/HeeJaeYo/alpha-tv-framework#readme",
   "devDependencies": {
-    "@types/jquery": "^3.5.8",
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "style-loader": "^3.3.1",
     "ts-loader": "^9.2.6",
     "typescript": "^4.4.4",
     "webpack": "^5.62.1",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.4.0"
-  },
-  "dependencies": {
-    "jquery": "^3.6.0"
+    "webpack-dev-server": "^4.4.0",
+    "webpack-merge": "^5.8.0"
   }
 }
