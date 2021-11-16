@@ -22,6 +22,7 @@ export default class Component<TComponentState = {}, TComponentProps extends { c
     if (this.parents) {
 
     }
+    this.lifeCycle();
   }
   private async lifeCycle() {
     await this.setState();

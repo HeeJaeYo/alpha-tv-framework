@@ -14,3 +14,16 @@ export function applyMixins(targetClass: any, baseClasses: any[]): void {
     });
   });
 }
+
+/**
+ * 1frame 뒤에 실행 시켜 주는 debounce 함수
+ * @param fn 
+ * @returns 
+ */
+export function debounce(fn: Function) {
+  let call: number = 0;
+  return (...args: any[]) => {
+    cancelAnimationFrame(call);
+    call = requestAnimationFrame(() => fn(...args));
+  }
+}
